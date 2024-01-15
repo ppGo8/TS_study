@@ -21,13 +21,16 @@
 
 // let a = 3; // interface不能使用let声明的变量
 const b = '6';
+const symid = Symbol('aaa');
 interface Test {
   name: '张三',
   [b]: number | '哈哈哈',
+  [symid]: number | '嗨嗨嗨',
 }
 type name1 = Test['name']
 type b1 = Test[typeof b]
 type b2 = Test['6']
+type c1 = Test[typeof symid];
 // 在 TypeScript 中，直接使用常量 b 作为接口属性名，TypeScript 会将其解释为字面量类型而不是变量
 // 而使用const 类型推导得到的值由是原始赋值
 // Test[typeof b] 中的 typeof b 将得到字面量类型 6，而不是变量 b 所代表的值。

@@ -1,0 +1,1 @@
+const tuple: [string, number, number] = ['pp', 170, 55] 
