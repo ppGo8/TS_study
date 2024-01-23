@@ -1,12 +1,13 @@
 {
   "scripts": {
     "dev:build": "tsc -w",
-    "dev:start": "nodemon --watch dist js --exec node ./dist/2-ClassDecorator.js",
+    "dev:start": "nodemon --watch dist js --exec node ./dist/7-匿名类.js",
     "start": "concurrently npm:dev:*",
-    "tsc": "tsc ./src/2-ClassDecorator.ts --target ES5 -w --experimentalDecorators"
+    "tsc": "tsc ./src/7-匿名类.ts --target ES5 -w --experimentalDecorators"
   },
   "dependencies": {
     "concurrently": "^8.2.2",
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "reflect-metadata": "^0.2.1"
   }
 }
